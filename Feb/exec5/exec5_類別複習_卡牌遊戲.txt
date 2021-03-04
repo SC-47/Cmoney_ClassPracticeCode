@@ -1,0 +1,40 @@
+撰寫一類別 Card 內含屬性 String suit, int point;
+Card 有一種建構子 Card(String suit, int point)
+-------------------------------------------------
+撰寫一類別Cards 內含屬性 Card cards[52] (其餘屬性可以自行添加)
+Cards 有一建構子 Cards()
+除了Getter/Setter  外 還具有下列方法
+
+shuffle() // 將cards中的順序洗亂
+deal() // 發出一張牌(第二次呼叫deal將發第二張 第三次呼叫發第三張 以此類推)
+reset() // 將cards還原到初始模樣(deal刷新回到第一張 順序還原)
+-------------------------------------------------
+撰寫一類別 CardPlayer 內含屬性 String name, int money
+CardPlayer有一建構子 CardPlayer(String name, int money)
+其他方法請視情況添加
+-------------------------------------------------
+撰寫一類別 CardGame 內含屬性
+Cards cards, CardPlayer[] players
+
+CardGame 有一建構子 CardGame()
+
+CardGame 有下列方法
+
+void addPlayer(CardPlayer cardplayer)
+
+void start(int round) => 進行round次遊戲 (當沒有設定玩家時印出錯誤)
+
+可自行添加其他方法
+
+每一回合開始時 會讓每位玩家提出賭注(賭注必須大於零且小於玩家持有現金)
+
+提出的賭注會寫入int bet(總賭金)
+
+提出賭注後使用Cards的 deal方法發出N(玩家個數)張牌進行比大小
+勝者可取走賭金 (如果牌發完則重新產生洗亂)
+
+若回合結束 則遊戲結束
+若有玩家手上金額已經歸零則接下來的回合跳過該玩家
+
+依照持有金額比較輸贏 印出勝利者的姓名 ( XXX 贏得遊戲)
+如果有複數個勝利者則都印出

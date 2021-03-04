@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b6bfcbc3-817c-4bea-9bc0-e8e35c36102e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../exam/exam.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/exec1_介面練習.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/exec1_多型練習_動物.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exec2/exec2_骰子練習.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exec_animal/exec1_多型練習_動物.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exec_animal/exec2_多型練習_動物.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exec_shape/exec3_多型練習_形狀.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exam/problem1/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../exam/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exam/problem1/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../exam/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exam/problem1/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../exam/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exam/problem1/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../exam/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exam/problem1/problem1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/exec1.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exam/problem1/src/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exam/src/Card.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exam/problem1/src/CardSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exam/src/CardSet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exam/problem1/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exam/src/Main.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectId" id="1pEjbD0XpsX1GEGuVjAtvsOUHTs" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b6bfcbc3-817c-4bea-9bc0-e8e35c36102e" name="Default Changelist" comment="" />
+      <created>1614755216114</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1614755216114</updated>
+    </task>
+    <servers />
+  </component>
+</project>
