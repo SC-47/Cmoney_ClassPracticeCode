@@ -1,7 +1,6 @@
-public class Animal {
+public abstract class Animal {
     private final String name;
     private final float weight;
-    protected String race;
     public Animal(String name, float weight){
         this.name = name;
         this.weight = weight;
@@ -15,11 +14,9 @@ public class Animal {
         return weight;
     }
 
-    public final String getRace() {
-        return race;
-    }
-
     public String getAnimalInfo(){
         return "名稱:"+getName()+" 重量:"+getWeight();
     }
+
+    public abstract String getRace();
 }

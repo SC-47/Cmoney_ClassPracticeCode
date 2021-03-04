@@ -1,7 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d4027f85-175e-4f4f-b894-dc18a87b8080" name="Default Changelist" comment="" />
+    <list default="true" id="d4027f85-175e-4f4f-b894-dc18a87b8080" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../exec1/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exec1/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exec1/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exec1/src/Comparator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exec1/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exec1/src/NameComparator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exec1/src/ScoreComparator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exec1/src/SeatNumComparator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exec1/src/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exec1/src/StudentArray.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exec2/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exec2/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exec2/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exec2/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exec2/exec2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exec2/src/Dice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exec2/src/DiceGame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exec2/src/DiceGameWinningRule.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exec2/src/Input.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exec2/src/IsLargerWin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exec2/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exec_shape/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exec_shape/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exec_shape/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exec_shape/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exec_shape/exec_shape.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exec_shape/src/AreaComparator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exec_shape/src/Circle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exec_shape/src/Comparator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exec_shape/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exec_shape/src/PerimeterComparator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exec_shape/src/Point.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exec_shape/src/Rectangle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exec_shape/src/Shape.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exec_shape/src/ShapeArray.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exec_shape/src/Square.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exec1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../exec1/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exec1/src/Animal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exec1/src/AnimalArray.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Animal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AnimalFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AnimalFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Cat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Dog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Mouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Mouse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exec_shape/exec3_多型練習_形狀.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../exec_shape/exec3_多型練習_形狀.txt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,6 +76,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />

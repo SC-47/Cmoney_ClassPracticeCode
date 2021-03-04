@@ -1,50 +1,138 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b6bfcbc3-817c-4bea-9bc0-e8e35c36102e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../exam/exam.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exec1_介面練習.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exec1_多型練習_動物.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exec2/exec2_骰子練習.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exec_animal/exec1_多型練習_動物.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exec_animal/exec2_多型練習_動物.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exec_shape/exec3_多型練習_形狀.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exam/problem1/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../exam/.idea/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exam/problem1/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../exam/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exam/problem1/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../exam/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exam/problem1/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../exam/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exam/problem1/problem1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/exec1.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exam/problem1/src/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exam/src/Card.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exam/problem1/src/CardSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exam/src/CardSet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exam/problem1/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exam/src/Main.java" afterDir="false" />
+    <list default="true" id="a870d541-eb52-430f-b326-1d621e978534" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Comparator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/NameComparator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ScoreComparator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SeatNumComparator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/StudentArray.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exec2/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exec2/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exec2/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exec2/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exec2/exec2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exec2/src/Dice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exec2/src/DiceGame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exec2/src/DiceGameWinningRule.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exec2/src/Input.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exec2/src/IsLargerWin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exec2/src/IsMoreSameWin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exec2/src/IsSmallerWin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exec2/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exec_shape/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exec_shape/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exec_shape/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exec_shape/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exec_shape/exec_shape.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exec_shape/src/AreaComparator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exec_shape/src/Circle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exec_shape/src/Comparator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exec_shape/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exec_shape/src/PerimeterComparator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exec_shape/src/Point.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exec_shape/src/Rectangle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exec_shape/src/Shape.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exec_shape/src/ShapeArray.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exec_shape/src/Square.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Animal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AnimalArray.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exec_animal/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../exec_animal/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exec_animal/out/production/exec_animal/Animal.class" beforeDir="false" afterPath="$PROJECT_DIR$/../exec_animal/out/production/exec_animal/Animal.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exec_animal/out/production/exec_animal/AnimalFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/../exec_animal/out/production/exec_animal/AnimalFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exec_animal/out/production/exec_animal/Cat.class" beforeDir="false" afterPath="$PROJECT_DIR$/../exec_animal/out/production/exec_animal/Cat.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exec_animal/out/production/exec_animal/Dog.class" beforeDir="false" afterPath="$PROJECT_DIR$/../exec_animal/out/production/exec_animal/Dog.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exec_animal/out/production/exec_animal/Mouse.class" beforeDir="false" afterPath="$PROJECT_DIR$/../exec_animal/out/production/exec_animal/Mouse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exec_animal/src/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exec_animal/src/Animal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exec_animal/src/AnimalFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exec_animal/src/AnimalFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exec_animal/src/Cat.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exec_animal/src/Cat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exec_animal/src/Dog.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exec_animal/src/Dog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exec_animal/src/Mouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exec_animal/src/Mouse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exec_shape/exec3_多型練習_形狀.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../exec_shape/exec3_多型練習_形狀.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
-  <component name="ProjectId" id="1pEjbD0XpsX1GEGuVjAtvsOUHTs" />
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="ProjectId" id="1pHLcdCmty9rF6h0yFIb99w1rzJ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="exec1" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="b6bfcbc3-817c-4bea-9bc0-e8e35c36102e" name="Default Changelist" comment="" />
-      <created>1614755216114</created>
+      <changelist id="a870d541-eb52-430f-b326-1d621e978534" name="Default Changelist" comment="" />
+      <created>1614835150988</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1614755216114</updated>
+      <updated>1614835150988</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

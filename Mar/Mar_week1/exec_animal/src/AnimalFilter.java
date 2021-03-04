@@ -9,16 +9,13 @@ public class AnimalFilter implements Filter {
         this.race = race;
     }
 
-    public String getRace() {
-        return race;
-    }
-
     @Override
     public boolean query(Animal animal) {
-        if (animal.getRace().equals(this.race)) {
+        if (animal.getRace().equals(race)) {
             return true;
         }
         return false;
-
     }
 }
+
+

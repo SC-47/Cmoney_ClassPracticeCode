@@ -2,6 +2,11 @@ public class Dog extends Animal {
 
     public Dog(String name, float weight) {
         super(name, weight);
-        this.race = "Dog";
     }
+
+    @Override
+    public String getRace() {
+        return "Dog";
+    }
+
 }
