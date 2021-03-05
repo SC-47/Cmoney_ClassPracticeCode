@@ -1,4 +1,4 @@
-public class StudentArray {
+public final class StudentArray {
     private Student[] students;
     private int count;
 
@@ -7,42 +7,38 @@ public class StudentArray {
         count = 0;
     }
 
-    public void add(Student student){
-        if (students.length == count){
+    public final void sort(Comparator comparator) {
+        for (int i = 0; i < count - 1; i++) {
+            for (int j = 0; j < count - 1 - i; j++) {
+                if (comparator.compare(students[j], students[j + 1])) {
+                    swap(j, j + 1);
+                }
+            }
+
+        }
+    }
+
+    public final void add(Student student) {
+        if (students.length == count) {
             doubleArray();
         }
         students[count++] = student;
     }
 
-    public StudentArray sort(Comparator comparator) {
-        for (int i = 0; i < count - 1; i++) {
-            for (int j = 0; j < count - 1 - i; j++) {
-                if (comparator.compare(students[j], students[j + 1]) > 0) {
-                    swap(j, j + 1);
-                }
-            }
-        }
-        return this;
+    public final Student getStudent(int index) {
+        return students[index];
     }
 
-    public void shuffle(){
-        for (int i = 0; i < count; i++){
-            swap(i,randomNumGen());
+    public final void shuffle(){
+        for (int i =0; i < count; i++){
+            swap(i,randomNum());
         }
     }
 
-    public void printAll(){
-        for (int i =0; i < count;i ++){
-            students[i].print();
+    public final void map(Mapper mapper){
+        for (int i =0; i < count; i ++){
+            mapper.map(students[i]);
         }
-    }
-
-    private void doubleArray(){
-        Student[] tmp = new Student[students.length*2];
-        for (int i =0; i < students.length; i++){
-            tmp[i] = students[i];
-        }
-        students = tmp;
     }
 
     private void swap(int a, int b) {
@@ -51,7 +47,15 @@ public class StudentArray {
         students[b] = tmp;
     }
 
-    private int randomNumGen() {
-        return (int) (Math.random() * (count + 1));
+    private void doubleArray() {
+        Student[] tmp = new Student[students.length * 2];
+        for (int i = 0; i < students.length; i++) {
+            tmp[i] = students[i];
+        }
+        students = tmp;
+    }
+
+    private int randomNum(){
+        return (int)(Math.random()*(count));
     }
 }

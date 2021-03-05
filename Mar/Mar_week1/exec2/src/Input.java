@@ -1,30 +1,23 @@
 import java.util.Scanner;
 
 public class Input {
-
-    public static int number(int min, int max) {
+    public static int number(String hint, int min, int max) {
         Scanner sc = new Scanner(System.in);
         int input;
         do {
+            System.out.println("請選擇" + hint + "(" + min + "~" + max + "):");
             input = sc.nextInt();
-            if (input >= min && input <= max) {
-                return input;
-            }
-            System.out.println("輸入數值超出範圍，請重新輸入:");
-        } while (true);
-
+        } while (input < min || input > max);
+        return input;
     }
 
-    public static int oddNumber() {
+    public static int oddNumber(String hint) {
         Scanner sc = new Scanner(System.in);
         int input;
         do {
+            System.out.println("請選擇" + hint + "(大於0的奇數):");
             input = sc.nextInt();
-            if (input > 0 && (input - 1) % 2 == 0) {
-                return input;
-            }
-            System.out.println("輸入錯誤數值，請重新輸入:");
-        } while (true);
-
+        } while (input < 0 || input % 2 == 0);
+        return input;
     }
 }

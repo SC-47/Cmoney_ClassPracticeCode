@@ -1,3 +1,3 @@
 public interface Comparator {
-    public int compare(Student a, Student b);
+    public boolean compare(Student a, Student b);
 }
