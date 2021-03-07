@@ -2,43 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c505099c-34e5-4ba5-9730-5ac80a6aa52c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../Mar_week1/exec1/src/Mapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Mar_week1/exec1/src/PrintMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exec4_6/Color.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exec4_6/exec4_生態系.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exec4_6/exec5_生態系2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exec4_6/exec6_生態系3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/file manager system.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/file manager system/Main.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/簡易版的檔案管理系統.doc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Mar_week1/exec1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mar_week1/exec1/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Mar_week1/exec1/out/production/exec1/Comparator.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mar_week1/exec1/out/production/exec1/Comparator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Mar_week1/exec1/out/production/exec1/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mar_week1/exec1/out/production/exec1/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Mar_week1/exec1/out/production/exec1/NameComparator.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mar_week1/exec1/out/production/exec1/NameComparator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Mar_week1/exec1/out/production/exec1/ScoreComparator.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mar_week1/exec1/out/production/exec1/ScoreComparator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Mar_week1/exec1/out/production/exec1/SeatNumComparator.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mar_week1/exec1/out/production/exec1/SeatNumComparator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Mar_week1/exec1/out/production/exec1/Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mar_week1/exec1/out/production/exec1/Student.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Mar_week1/exec1/out/production/exec1/StudentArray.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mar_week1/exec1/out/production/exec1/StudentArray.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Mar_week1/exec1/src/Comparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mar_week1/exec1/src/Comparator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Mar_week1/exec1/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mar_week1/exec1/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Mar_week1/exec1/src/NameComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mar_week1/exec1/src/NameComparator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Mar_week1/exec1/src/ScoreComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mar_week1/exec1/src/ScoreComparator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Mar_week1/exec1/src/SeatNumComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mar_week1/exec1/src/SeatNumComparator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Mar_week1/exec1/src/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mar_week1/exec1/src/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Mar_week1/exec1/src/StudentArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mar_week1/exec1/src/StudentArray.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Mar_week1/exec2/src/Dice.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Mar_week1/exec2/src/DiceGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mar_week1/exec2/src/DiceGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Mar_week1/exec2/src/DiceGameWinningRule.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Mar_week1/exec2/src/Input.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Mar_week1/exec2/src/IsLargerWin.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Mar_week1/exec2/src/IsMoreSameWin.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Mar_week1/exec2/src/IsSmallerWin.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Mar_week1/exec2/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mar_week1/exec2/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/file manager system/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/file manager system/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +32,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Mar_week1/exec2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
