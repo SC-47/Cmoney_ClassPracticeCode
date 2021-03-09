@@ -2,7 +2,8 @@ public class Book {
     private String name;
     private String author;
     private Date date;
-    public Book(String name, String author, Date date){
+
+    public Book(String name, String author, Date date) {
         setName(name);
         setAuthor(author);
         setDate(date);
@@ -32,17 +33,9 @@ public class Book {
         return date;
     }
 
-    public String getBookInfo(){
-        String str = "書名:"+this.getName();
-        str += " 作者:"+this.getAuthor();
-        str += " 年月日:"+this.getDate().getDateString();
-        return str;
-    }
-
-    public String getBookInfo(char c){
-        String str = "書名:"+this.getName();
-        str += " 作者:"+this.getAuthor();
-        str += " 年月日:"+this.getDate().getDateString(c);
-        return str;
+    public String getBookInfo() {
+        return "書名:" + getName()
+                + " 作者:" + getAuthor()
+                + " 出版日期:" + getDate().getDateString();
     }
 }
