@@ -1,4 +1,4 @@
 @FunctionalInterface
 public interface Consumer {
-    void consume(Library library);
+    void accept(Book book);
 }

@@ -1,4 +1,4 @@
 @FunctionalInterface
 public interface BookFilter {
-    boolean query(Book book);
+    boolean filter(Book book);
 }

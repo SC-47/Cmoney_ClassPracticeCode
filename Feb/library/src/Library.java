@@ -1,57 +1,71 @@
 public class Library {
     private BookShelf[] bookShelves;
-    private int amount;
+    private int count;
 
     public Library() {
         bookShelves = new BookShelf[2];
-        amount = 0;
-    }
-
-    public int getAmount() {
-        return amount;
-    }
-
-    public BookShelf getBookShelf(int index) {
-        return bookShelves[index];
+        count = 0;
     }
 
     public void addBookShelf(BookShelf bookShelf) {
-        if (amount == bookShelves.length) {
+        if (count == bookShelves.length) {
             doubleArray();
         }
-        bookShelves[amount++] = bookShelf;
+        bookShelves[count++] = bookShelf;
+    }
+
+    public BookShelf getBySerialNum(int serialNum) {
+        for (int i = 0; i < count; i++) {
+            if (bookShelves[i].getSerialNumber() == serialNum) {
+                return bookShelves[i];
+            }
+        }
+        return null;
+    }
+
+    public Library filter(BookShelfFilter bookShelfFilter) {
+        Library tmp = new Library();
+        for (int i = 0; i < count; i++) {
+            if (bookShelfFilter.filter(bookShelves[i])) {
+                tmp.addBookShelf(bookShelves[i]);
+            }
+        }
+        return tmp;
+    }
+
+    public void consume(Consumer consumer) {
+        BookFilter nonFilter = book -> true;
+        consume(consumer, nonFilter);
+    }
+
+    public void consume(Consumer consumer, BookFilter bookFilter) {
+        for (int i = 0; i < count; i++) {
+            for (int j = 0; j < bookShelves[i].getBookNum(); j++) {
+                if (bookFilter.filter(bookShelves[i].getBook(j))) {
+                    consumer.accept(bookShelves[i].getBook(j));
+                }
+            }
+        }
     }
 
     public void addBook(Book book, String classification) {
-        Library tmp = sort(classification);
-        int amount = 0;
-        do {
-            if (tmp.getBookShelf(amount).add(book)) {
+        Library tmp = this.filter(bookShelf -> bookShelf.getClassification().equals(classification));
+        for (int i = 0; i < tmp.count; i++) {
+            if (tmp.getByIndex(i).add(book)) {
                 return;
             }
-            amount++;
-        } while (amount != tmp.getAmount());
+        }
+        if (tmp.count == 0) {
+            System.out.println("書櫃不存在");
+            return;
+        }
         System.out.println("書櫃全滿");
     }
 
-    public void queryBook() {
-        BookFilter nonFilter = book -> true;
-        queryBook(this, nonFilter);
-    }
-
-    public void queryBook(String classification) {
-        BookFilter nonFilter = book -> true;
-        queryBook(this.sort(classification), nonFilter);
-    }
-
-    public void queryBook(BookFilter bookFilter) {
-        queryBook(this, bookFilter);
-    }
-
-    public BookShelf queryBookShelf(int bookShelfNum) {
-        for (int i = 0; i < amount; i++) {
-            if (bookShelves[i].getNum() == bookShelfNum) {
-                return bookShelves[i];
+    public Book getBook(String key) {
+        for (int i = 0; i < count; i++) {
+            if (bookShelves[i].getByName(key) != null) {
+                return bookShelves[i].getByName(key);
             }
         }
         return null;
@@ -59,38 +73,13 @@ public class Library {
 
     private void doubleArray() {
         BookShelf[] tmp = new BookShelf[bookShelves.length * 2];
-        for (int i = 0; i < amount; i++) {
+        for (int i = 0; i < bookShelves.length; i++) {
             tmp[i] = bookShelves[i];
         }
         bookShelves = tmp;
     }
 
-    private Library sort(String classification) {
-        Library tmp = new Library();
-        BookShelfFilter classificationFilter = bookShelf ->
-                bookShelf.getClassification().equals(classification);
-        for (int i = 0; i < amount; i++) {
-            if (classificationFilter.query(bookShelves[i])) {
-                tmp.addBookShelf(bookShelves[i]);
-            }
-        }
-        return tmp;
-    }
-
-
-    private void queryBook(Library library, BookFilter bookFilter) {
-        Consumer printConsumer = libraryP -> {
-            for (int i = 0; i < libraryP.amount; i++) {
-                BookShelf tmp = libraryP.getBookShelf(i);
-                int bookNum = tmp.getBookNum();
-                for (int j = 0; j < bookNum; j++) {
-                    if (bookFilter.query(tmp.getBook(j))) {
-                        System.out.println(tmp.getBook(j).getBookInfo());
-                    }
-                }
-            }
-        };
-        printConsumer.consume(library);
-
+    private BookShelf getByIndex(int index) {
+        return bookShelves[index];
     }
 }

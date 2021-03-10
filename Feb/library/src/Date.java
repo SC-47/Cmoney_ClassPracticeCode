@@ -41,14 +41,27 @@ public class Date {
         return getYear() * 1000 + getMonth() * 100 + getDay();
     }
 
+    @Override
+    public String toString() {
+        return getDateString();
+    }
+
     public String getDateString() {
-        return getDateString('.');
+        return getDateString('/');
     }
 
     public String getDateString(char c) {
-        String str = String.valueOf(getYear()) + c;
-        str += String.valueOf(getMonth()) + c;
-        str += String.valueOf(getDay());
-        return str;
+        String date = String.valueOf(getYear()) + c;
+        date += String.valueOf(getMonth()) + c;
+        date += String.valueOf(getDay());
+        return date;
+    }
+
+    public int compare(Date date){
+        return this.getDateInt()-date.getDateInt();
+    }
+
+    public boolean isBetweenWith(Date startDate, Date endDate){
+        return this.compare(startDate)>= 0 && this.compare(endDate) <= 0;
     }
 }

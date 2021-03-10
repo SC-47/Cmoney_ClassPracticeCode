@@ -1,7 +1,8 @@
 public class Test {
     private final int a;
     private final int b;
-
+    Conumer consumer = new Consumer;
+.consume(consumer)
     public Test(int a, int b) {
         this. a = a;
         this.b = b;

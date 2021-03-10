@@ -1,67 +1,43 @@
-public class Card {
-    private String icon;
-    private int cardNum;
-
-    public Card(String icon, int cardNum) {
-        setIcon(icon);
-        setCardNum(cardNum);
+public class Card{
+    private static final String[] SUIT_ARRAY = {"梅花","方塊","紅心","黑桃"};
+    private String suit;
+    private int number;
+    public Card(String suit, int number){
+        this.suit = suit;
+        this.number = number;
     }
 
-    public void setIcon(String icon) {
-        this.icon = icon;
+    public static Card gen(int card){
+        return new Card(SUIT_ARRAY[card/13],card%13+1);
     }
 
-    public void setCardNum(int cardNum) {
-        this.cardNum = cardNum;
+    public String getSuit() {
+        return suit;
     }
 
-    public String getIcon() {
-        return icon;
+    public int getNumber() {
+        return number;
     }
 
-    public int getCardNum() {
-        return cardNum;
+    public int compareCard(Card card){
+        int point1 = this.getNumber()*10+this.getSuitNum();
+        int point2 = card.getNumber()*10+card.getSuitNum();
+        return point1-point2;
     }
 
-    public String getCardInfo() {
-        String str = this.getIcon();
-        str += String.valueOf(getCardNum());
-        return str;
+    @Override
+    public String toString() {
+        return getSuit()+getNumber();
     }
 
-    public void printCardInfo() {
-        System.out.println(this.getCardInfo());
-    }
-
-    public boolean isLargerThan(Card card) {
-        int compareNum = this.getCardNum() - card.getCardNum();
-        if (compareNum > 0) {
-            return true;
-        } else if (compareNum == 0) {
-            if(this.iconNum()>card.iconNum()){
-                return true;
-            }else{
-                return false;
+    private int getSuitNum(){
+        for(int i=0; i < SUIT_ARRAY.length;i++){
+            if(this.getSuit().equals(SUIT_ARRAY[i])){
+                return i;
             }
-        }else{
-            return false;
         }
+        return 0;
     }
 
-    private int iconNum() {
-        if (this.icon.equals("梅花")) {
-            return 1;
-        }
-        else if (this.icon.equals("方塊")) {
-            return 2;
-        }
-        else if (this.icon.equals("紅心")) {
-            return 3;
-        }
-        else if (this.icon.equals("黑桃")) {
-            return 4;
-        }else{
-            return 0;
-        }
-    }
+
 }

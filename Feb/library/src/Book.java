@@ -33,9 +33,8 @@ public class Book {
         return date;
     }
 
-    public String getBookInfo() {
-        return "書名:" + getName()
-                + " 作者:" + getAuthor()
-                + " 出版日期:" + getDate().getDateString();
+    @Override
+    public String toString() {
+        return "書名:" + getName() + " 作者:" + getAuthor() + " 出版日期:" + getDate();
     }
 }

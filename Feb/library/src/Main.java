@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 public class Main {
+
     public static void main(String[] args) {
         Library library = new Library();
         int func;
@@ -8,54 +9,56 @@ public class Main {
             func = inputInt("功能碼(1~10)");
             switch (func) {
                 case 1 -> library.addBookShelf(new BookShelf(
-                        inputString("書櫃分類"),
-                        inputInt("存書量")));
-                case 2 -> library.addBook(new Book(
-                        inputString("書名"),
-                        inputString("作者"),
-                        inputDate("出版日期")
-                ), inputString("書櫃分類"));
-                case 3 -> library.queryBook(inputString("欲查詢書櫃分類"));
+                        inputString("書櫃分類"), inputInt("存書量上限")
+                ));
+                case 2 -> library.addBook(
+                        new Book(inputString("書名"), inputString("作者"), inputDate("出版日期"))
+                        , inputString("書櫃分類"));
+                case 3 -> {
+                    String classification = inputString("指定分類");
+                    library.filter(
+                            bookShelf -> bookShelf.getClassification().equals(classification)
+                    ).consume(System.out::println);
+                }
                 case 4 -> {
-                    String author = inputString("欲查詢作者");
-                    BookFilter authorFilter = book -> book.getAuthor().equals(author);
-                    library.queryBook(authorFilter);
+                    String author = inputString("指定作者");
+                    library.consume(System.out::println, book -> book.getAuthor().equals(author));
                 }
                 case 5 -> {
-                    String name = inputString("欲查詢書名");
-                    BookFilter nameFilter = book -> book.getName().equals(name);
-                    library.queryBook(nameFilter);
+                    String name = inputString("指定書名");
+                    library.consume(System.out::println, book -> book.getName().equals(name));
                 }
                 case 6 -> {
-                    Date publicationDate = inputDate("欲查詢出版日期");
-                    BookFilter dateFilter = book ->
-                            book.getDate().getDateInt() == publicationDate.getDateInt();
-                    library.queryBook(dateFilter);
+                    Date date = inputDate("指定出版日期");
+                    library.consume(
+                            System.out::println, book -> book.getDate().getDateInt() == date.getDateInt()
+                    );
                 }
                 case 7 -> {
-                    Date startDate = inputDate("欲查詢開始日期");
-                    Date endDate = inputDate("欲查詢結束日期");
-                    BookFilter dateBetweenFilter = book -> book.getDate().getDateInt() >= startDate.getDateInt() &&
-                            book.getDate().getDateInt() <= endDate.getDateInt();
-                    library.queryBook(dateBetweenFilter);
+                    Date startDate = inputDate("開始日期");
+                    Date endDate = inputDate("結束日期");
+                    library.consume(
+                            System.out::println, book ->
+                                    book.getDate().isBetweenWith(startDate, endDate));
                 }
                 case 8 -> {
-                    Book book = library.queryBookShelf(inputInt("欲修改書之書櫃編號")).
-                            getByName(inputString("欲修改書之書名"));
-                    book.setName(inputString("重新輸入書名"));
-                    book.setAuthor(inputString("重新輸入作者"));
-                    book.setDate(inputDate("重新輸入出版日期"));
+                    String name = inputString("欲查詢書名");
+                    Book tmp = library.getBook(name);
+                    if (tmp == null) {
+                        System.out.println("查無此書");
+                        return;
+                    }
+                    tmp.setName(inputString("修改後書名"));
+                    tmp.setAuthor(inputString("修改後作者"));
+                    tmp.setDate(inputDate("修改後出版日期"));
                 }
-                case 9 -> library.queryBook();
+                case 9 -> library.consume(System.out::println);
                 case 10 -> System.exit(0);
             }
-        } while (true);
-    }
 
-    public static String inputString(String hint) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("請輸入" + hint);
-        return sc.nextLine();
+        } while (true);
+
+
     }
 
     public static int inputInt(String hint) {
@@ -69,4 +72,11 @@ public class Main {
         System.out.println("請輸入" + hint + "(年、月、日):");
         return new Date(sc.nextInt(), sc.nextInt(), sc.nextInt());
     }
+
+    public static String inputString(String hint) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("請輸入" + hint + ":");
+        return sc.nextLine();
+    }
+
 }
