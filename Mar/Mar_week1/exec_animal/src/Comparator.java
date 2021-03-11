@@ -1,3 +1,3 @@
 public interface Comparator {
-    public int compare(Animal a, Animal b);
+    boolean compare(Animal a, Animal b);
 }

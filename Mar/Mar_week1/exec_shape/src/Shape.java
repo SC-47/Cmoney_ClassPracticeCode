@@ -1,19 +1,17 @@
 public abstract class Shape {
-    private Point point;
-    public Shape(float x, float y){
-        setPoint(x,y);
-    }
-    public abstract float area();
+    private final Point point;
 
-    public abstract float perimeter();
-
-    public abstract void print();
-
-    public void setPoint(float x, float y){
-        point = new Point(x, y);
+    public Shape(Point point) {
+        this.point = point;
     }
 
     public Point getPoint() {
         return point;
     }
+
+    abstract float area();
+
+    abstract float perimeter();
+
+    abstract void print();
 }

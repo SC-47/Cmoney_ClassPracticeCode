@@ -1,11 +1,24 @@
-public class Square extends Rectangle {
+public class Square extends Shape {
+    private final float w;
 
-    public Square(float w, float x, float y) {
-        super(w, w, x, y);
+    public Square(Point point, float w) {
+        super(point);
+        this.w = w;
     }
 
-    public void print() {
-        System.out.printf("正方形=> 面積: %5.2f 周長: %5.2f", this.area(), this.perimeter());
+    @Override
+    float area() {
+        return w * w;
+    }
+
+    @Override
+    float perimeter() {
+        return 4 * w;
+    }
+
+    @Override
+    void print() {
+        System.out.printf("正方形=> 面積: %5.2f 周長: %5.2f", area(), perimeter());
         System.out.println();
     }
 }

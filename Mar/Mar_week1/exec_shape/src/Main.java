@@ -2,76 +2,63 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        ShapeArray shapes = new ShapeArray();
+        ShapeArray shapeArray = new ShapeArray();
         int func;
         do {
-            System.out.println("請輸入功能碼(1~6):");
-            func = sc.nextInt();
+            func = inputInt("功能碼(1~8)");
             switch (func) {
-                case 1:
-                    System.out.println("請輸入功能碼(1~3):");
-                    func = sc.nextInt();
-                    switch (func) {
-                        case 1:
-                            System.out.println("請輸入半徑:");
-                            float r = sc.nextFloat();
-                            System.out.println("請輸入中心點座標(x,y):");
-                            shapes.add(new Circle(r, sc.nextFloat(), sc.nextFloat()));
-                            break;
-                        case 2:
-                            System.out.println("請輸入長與寬:");
-                            float w = sc.nextFloat();
-                            float h = sc.nextFloat();
-                            System.out.println("請輸入中心點座標(x,y):");
-                            shapes.add(new Rectangle(w, h, sc.nextFloat(), sc.nextFloat()));
-                            break;
-                        case 3:
-                            System.out.println("請輸入寬:");
-                            w = sc.nextFloat();
-                            System.out.println("請輸入中心點座標(x,y):");
-                            shapes.add(new Square(w, sc.nextFloat(), sc.nextFloat()));
-                            break;
-                        default:
-                            System.out.println("輸入錯誤，退回上一步");
-                            break;
+                case 1 -> {
+                    int shapeInt = inputInt("功能碼(1~3)");
+                    switch (shapeInt) {
+                        case 1 -> shapeArray.add(new Circle(new Point(
+                                inputFloat("中心座標(x軸)"), inputFloat("中心座標(y軸)")),
+                                inputFloat("半徑")));
+                        case 2 -> shapeArray.add(new Rectangle(new Point(
+                                inputFloat("中心座標(x軸)"), inputFloat("中心座標(y軸)")),
+                                inputFloat("寬"), inputFloat("高")));
+                        case 3 -> shapeArray.add(new Square(new Point(
+                                inputFloat("中心座標(x軸)"), inputFloat("中心座標(y軸)")),
+                                inputFloat("寬")));
                     }
-                    break;
-                case 2:
-                    System.out.println("請輸入位置");
-                    shapes.getShape(sc.nextInt()).print();
-                    break;
-                case 3:
-                    shapes.sort(new AreaComparator());
-                    break;
-                case 4:
-                    shapes.sort(new PerimeterComparator());
-                    break;
-                case 5:
-                    shapes.printAll();
-                    break;
-                case 6:
-                    System.exit(0);
-                    break;
-                case 7:
-                    System.out.println("請輸入兩個圖形位置");
-                    float distance = shapes.getShape(sc.nextInt()).getPoint()
-                            .calculateDistanceWith(shapes.getShape(sc.nextInt()).getPoint());
-                    System.out.printf("兩圖形距離 = %5.2f", distance);
-                    System.out.println();
-                    break;
-                case 8:
-                    System.out.println("請輸入座標1(x,y)");
-                    Point point1 = new Point (sc.nextInt() ,sc.nextInt());
-                    System.out.println("請輸入座標2(x,y)");
-                    Point point2 = new Point (sc.nextInt() ,sc.nextInt());
-                    for(int i =0; i < shapes.getCount(); i++) {
-                        if (shapes.getShape(i).getPoint().isInArea(point1, point2)) {
-                            shapes.getShape(i).print();
-                        }
-                    }
-                    break;
+                }
+                case 2 -> shapeArray.getShape(inputInt("指定位置")).print();
+                case 3 -> shapeArray.sort((a, b) -> a.area() > b.area()).
+                        consume(Shape::print);
+                case 4 -> shapeArray.sort((a, b) -> a.perimeter() > b.perimeter()).
+                        consume(Shape::print);
+                case 5 -> shapeArray.consume(Shape::print);
+                case 6 -> System.exit(0);
+                case 7 -> {
+                    float distance = shapeArray.getShape(inputInt("指定位置"))
+                            .getPoint().getDistanceFrom(
+                                    shapeArray.getShape(inputInt("指定位置")).getPoint());
+                    System.out.println(distance);
+                }
+                case 8 -> {
+                    Point pointA = inputPoint("輸入座標(左上)");
+                    Point pointB = inputPoint("輸入座標(右下)");
+                    shapeArray.filter(shape -> shape.getPoint().isBetweenWith(pointA, pointB))
+                            .consume(Shape::print);
+                }
             }
+
         } while (true);
+    }
+
+    public static int inputInt(String hint) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("請輸入" + hint + ":");
+        return sc.nextInt();
+    }
+
+    public static float inputFloat(String hint) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("請輸入" + hint + ":");
+        return sc.nextFloat();
+    }
+
+    public static Point inputPoint(String hint) {
+        System.out.println("請輸入" + hint + ":");
+        return new Point(inputFloat("輸入座標(x軸)"), inputFloat("輸入座標(y軸)"));
     }
 }

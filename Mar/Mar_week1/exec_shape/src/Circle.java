@@ -1,29 +1,25 @@
 public class Circle extends Shape {
     private static final float PI = 3.1415926f;
-    private float r;
+    private final float r;
 
-    public Circle(float r, float x, float y) {
-        super(x,y);
-        setR(r);
-    }
-
-    private void setR(float r) {
+    public Circle(Point point, float r) {
+        super(point);
         this.r = r;
     }
 
     @Override
-    public float area() {
+    float area() {
         return r * r * PI;
     }
 
     @Override
-    public float perimeter() {
-        return 2 * r * PI;
+    float perimeter() {
+        return 2 * PI * r;
     }
 
     @Override
-    public void print() {
-        System.out.printf("圓形 => 面積: %5.2f 周長: %5.2f",this.area(),this.perimeter());
+    void print() {
+        System.out.printf("圓形=> 面積: %5.2f 周長: %5.2f", area(), perimeter());
         System.out.println();
     }
 }

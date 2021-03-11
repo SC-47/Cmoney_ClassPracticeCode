@@ -1,5 +1,4 @@
-public class Dog extends Animal {
-
+public class Dog extends Animal{
     public Dog(String name, float weight) {
         super(name, weight);
     }
@@ -9,4 +8,8 @@ public class Dog extends Animal {
         return "Dog";
     }
 
+    @Override
+    public String toString() {
+        return getRace()+" 名稱:"+getName()+" 體重:"+getWeight();
+    }
 }

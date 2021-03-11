@@ -7,34 +7,41 @@ public class ShapeArray {
         count = 0;
     }
 
-    public final void add(Shape shape) {
-        if (shapes.length == count) {
+    public void add(Shape shape) {
+        if (count == shapes.length) {
             doubleArray();
         }
         shapes[count++] = shape;
     }
 
-    public final Shape getShape(int index) {
+    public Shape getShape(int index) {
         return shapes[index];
     }
 
-    public int getCount() {
-        return count;
-    }
-
-    public final void sort(Comparator comparator) {
+    public ShapeArray sort(Comparator comparator) {
         for (int i = 0; i < count - 1; i++) {
-            for (int j = 0; j < count - 1 - i; j++) {
-                if (comparator.compare(shapes[j], shapes[j + 1]) > 0) {
+            for (int j = 0; j < count - i - 1; j++) {
+                if (comparator.compare(shapes[j], shapes[j + 1])) {
                     swap(j, j + 1);
                 }
             }
         }
+        return this;
     }
 
-    public final void printAll (){
-        for (int i = 0; i < count; i ++){
-            shapes[i].print();
+    public ShapeArray filter(Filter filter) {
+        ShapeArray tmp = new ShapeArray();
+        for (int i = 0; i < count; i++) {
+            if (filter.use(shapes[i])) {
+                tmp.add(shapes[i]);
+            }
+        }
+        return tmp;
+    }
+
+    public void consume(Consumer consumer) {
+        for (int i = 0; i < count; i++) {
+            consumer.accept(shapes[i]);
         }
     }
 
@@ -46,10 +53,9 @@ public class ShapeArray {
         shapes = tmp;
     }
 
-    private final void swap(int a, int b) {
-        Shape tmp = this.shapes[a];
-        this.shapes[a] = this.shapes[b];
-        this.shapes[b] = tmp;
+    private void swap(int a, int b) {
+        Shape tmp = shapes[a];
+        shapes[a] = shapes[b];
+        shapes[b] = tmp;
     }
-
 }

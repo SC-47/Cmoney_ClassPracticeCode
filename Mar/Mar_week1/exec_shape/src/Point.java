@@ -1,38 +1,26 @@
 public class Point {
-    private float x;
-    private float y;
+    private final float x;
+    private final float y;
 
     public Point(float x, float y) {
-        setX(x);
-        setY(y);
-    }
-
-    public float getX() {
-        return x;
-    }
-
-    public float getY() {
-        return y;
-    }
-
-    public void setX(float x) {
         this.x = x;
-    }
-
-    public void setY(float y) {
         this.y = y;
     }
 
-    public float calculateDistanceWith(Point a) {
-        return (float) Math.sqrt(Math.pow((a.getX() - this.getX()), 2) + Math.pow((a.getY() - this.getY()), 2));
+    private float getX() {
+        return x;
     }
 
-    public boolean isInArea(Point a, Point b) {
-        if (this.x >= Math.min(a.getX(), b.getX()) && this.x <= Math.max(a.getX(), b.getX()) &&
-                this.y >= Math.min(a.getY(), b.getY()) && this.y <= Math.max(a.getY(), b.getY())) {
-            return true;
-        } else {
-            return false;
-        }
+    private float getY() {
+        return y;
+    }
+
+    public float getDistanceFrom(Point point) {
+        return (float) Math.sqrt(Math.pow((getX() - point.getX()), 2) + Math.pow((getY() - point.getY()), 2));
+    }
+
+    public boolean isBetweenWith(Point a, Point b) {
+        return (this.getX() >= a.getX() && this.getY() >= a.getY()) &&
+                (this.getX() <= b.getX() && this.getY() <= b.getY());
     }
 }

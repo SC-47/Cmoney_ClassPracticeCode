@@ -1,3 +1,4 @@
+@FunctionalInterface
 public interface WinningRule {
-    public int winRound(int[] player1, int[] player2);
+    int win(int[] player1, int[] player2);
 }

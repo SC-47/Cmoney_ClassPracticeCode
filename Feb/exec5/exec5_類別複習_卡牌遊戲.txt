@@ -20,7 +20,7 @@ CardGame 有一建構子 CardGame()
 
 CardGame 有下列方法
 
-void addPlayer(CardPlayer cardplayer)
+void addPlayer(CardPlayer cardPlayer)
 
 void start(int round) => 進行round次遊戲 (當沒有設定玩家時印出錯誤)
 
