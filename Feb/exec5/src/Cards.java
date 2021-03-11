@@ -1,41 +1,34 @@
 public class Cards {
     private static final int MAX = 52;
-    private Card[] cards;
+    private final Card[] cards;
     private int dealCount;
 
     public Cards() {
         cards = new Card[MAX];
+        for (int i = 0; i < MAX; i++) {
+            cards[i] = Card.gen(i);
+        }
         dealCount = 0;
     }
 
-    public Card[] getCards() {
-        return cards;
-    }
-
-    public void setCards(Card[] cards) {
-        this.cards = cards;
-    }
-
-    public void shuffle() {
+    public Cards shuffle() {
         for (int i = 0; i < cards.length; i++) {
             swap(i, (int) (Math.random() * 52));
         }
+        return this;
     }
 
-    public Card deal(){
+    public Card deal() {
+        if(dealCount==MAX){
+            reset();
+            dealCount =0;
+            shuffle();
+        }
         return cards[dealCount++];
     }
 
-    public void reset(){
+    public void reset() {
         dealCount = 0;
-    }
-
-
-
-    public void consume(Consumer consumer) {
-        for (int i = 0; i < cards.length; i++) {
-            consumer.accept(cards[i]);
-        }
     }
 
     private void swap(int a, int b) {

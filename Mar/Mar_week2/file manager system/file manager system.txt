@@ -1,0 +1,62 @@
+簡易版的檔案管理系統
+
+請撰寫一個簡易版的檔案管理系統，用以協助使用者管理檔案與資料夾名稱；並提供以下的文字指令，用來進行檔案或資料夾的建立與檢視：
+1.	ls：檢視所在目錄底下的所有檔名與目錄夾名稱。
+2.	cd <資料夾名稱>：進入某一個資料夾當中。
+3.	cd.. ：回上一層目錄。
+4.	touch <檔名>：建立一個空檔案(註：並非真的建立檔案，僅僅是新增檔名而已)
+5.	mkdir <資料夾名稱>：建立一個新的資料夾。
+6.	search <關鍵字>：根據關鍵字搜尋目錄夾與其子目錄夾中所有包含該關鍵字的檔案與資料夾（大小寫不分）
+
+執行範例如下（使用者輸入部分以黑體字標註）： 
+\root>ls
+Total: 0 files, 0 directories
+
+\root>touch aa
+\root>touch bbb
+\root>mkdir d1
+\root>mkdir d2
+\root>ls
+[d2]
+[d1]
+aa
+bbb 
+Total: 2 files, 2 directories
+
+\root>cd d1
+\root\d1>mkdir d3
+\root\d1>mkdir d4
+\root\d1>ls
+[d4]
+[d3]
+Total: 0 files, 2 directories
+
+\root\d1>cd..
+\root >search d
+\root\d2
+\root\d1
+\root\d1\d4
+\root\d1\d3
+
+\root>
+
+你或許可用以下的類別來實作上述的程式：
+public class Directory {	            //代表一個資料夾當中的所有資訊
+	private Directory parent;		    //代表上一層目錄；如果是此資料夾為根目錄，便設為NULL
+	private Directory[] dirList;		//此資料夾中所包含的目錄
+	private File[] fileList;
+	private int directoryCount;			//包含的目錄個數
+	private int fileCount;			    //包含的檔案個數
+	private String name;
+	//請加入必要的建構子與成員方法
+	public String[] search(String keyword) {}  //務必實作，以關鍵字搜尋檔名（可用遞迴）
+}
+    public class File {	//代表一個資料夾當中的所有資訊
+	                    //請加入必要的屬性、建構子與成員方法
+	private String name;
+}
+
+一開始，請在程式中建立一個根目錄並初始化如下：
+Directory root = new Directory("root");
+
+
